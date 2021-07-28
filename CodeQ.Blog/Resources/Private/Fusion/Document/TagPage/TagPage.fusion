@@ -1,0 +1,5 @@
+prototype(CodeQ.Blog:Document.TagPage) < prototype(CodeQ.Site:Document.AbstractPage) {
+    body.content = CodeQ.Blog.Utils:Integration.Template.TaxonomyPage {
+        node = ${node}
+    }
+}

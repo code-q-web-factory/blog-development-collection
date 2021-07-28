@@ -1,0 +1,7 @@
+prototype(CodeQ.Blog:Document.BlogPage) < prototype(CodeQ.Site:Document.AbstractPage) {
+    body.content = CodeQ.Blog.Utils:Integration.Template.OverviewPage {
+        node = ${node}
+    }
+
+    @process.addDefaultAssets = CodeQ.Blog.Utils:Integration.Mixin.DefaultAssets
+}

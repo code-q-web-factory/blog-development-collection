@@ -1,0 +1,8 @@
+'CodeQ.Blog:Document.PostGroupPage':
+  superTypes:
+    'CodeQ.Blog.Utils:Mixin.PostGroup': true
+  ui:
+    label: 'Blog Gruppe'
+    icon: icon-newspaper
+    group: 'general'
+    position: 100

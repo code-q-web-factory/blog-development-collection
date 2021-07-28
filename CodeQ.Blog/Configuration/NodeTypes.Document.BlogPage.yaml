@@ -1,0 +1,8 @@
+'CodeQ.Blog:Document.BlogPage':
+  superTypes:
+    'CodeQ.Blog.Utils:Mixin.Blog': true
+  ui:
+    label: 'Blog Übersichtsseite'
+    icon: icon-newspaper
+    group: 'plugins'
+    position: 100

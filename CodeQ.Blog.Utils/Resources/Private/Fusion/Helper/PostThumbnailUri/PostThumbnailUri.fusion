@@ -1,0 +1,21 @@
+prototype(CodeQ.Blog.Utils:Helper.PostThumbnailUri) < prototype(Neos.Fusion:Component) {
+    node = ${node}
+
+    renderer = Neos.Fusion:Case {
+        hasImage {
+            condition = ${q(props.node).property('image')}
+            renderer = Neos.Neos:ImageUri {
+                asset = ${q(props.node).property('image')}
+                height = 150
+                width = 300
+                allowCropping = true
+                allowUpScaling = true
+            }
+        }
+
+        default {
+            condition = ${true}
+            renderer = ''
+        }
+    }
+}

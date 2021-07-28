@@ -1,0 +1,5 @@
+prototype(CodeQ.Blog:Document.PostPage.Short) < prototype(Neos.Fusion:Component) {
+    renderer = CodeQ.Blog.Utils:Integration.Molecule.PostItem {
+        node = ${node}
+    }
+}

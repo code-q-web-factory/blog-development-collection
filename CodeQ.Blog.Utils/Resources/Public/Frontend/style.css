@@ -1,0 +1,25 @@
+.codeq-blog__overview {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.codeq-blog__post-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content 1fr 1fr 1fr 1fr;
+    justify-items: start;
+    column-span: 2;
+    gap: 1rem;
+}
+
+.codeq-blog__post-item, .codeq-blog__post-item a {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.codeq-blog__post-item-thumbnail, .codeq-blog__post-item-thumbnail img {
+    width: 100%;
+}

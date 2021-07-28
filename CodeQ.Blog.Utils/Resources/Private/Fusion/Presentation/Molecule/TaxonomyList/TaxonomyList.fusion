@@ -1,0 +1,15 @@
+prototype(CodeQ.Blog.Utils:Presentation.Molecule.TaxonomyList) < prototype(Neos.Fusion:Component) {
+    title = null
+    items = null
+
+    renderer = afx`
+        <div class="codeq-blog__taxonomy-list">
+            <h3>{props.title}</h3>
+            <ul>
+                <Neos.Fusion:Loop items={props.items} itemName="node">
+                    <li><Neos.Neos:NodeLink node={node}>{q(node).property('title')}</Neos.Neos:NodeLink></li>
+                </Neos.Fusion:Loop>
+            </ul>
+        </div>
+    `
+}

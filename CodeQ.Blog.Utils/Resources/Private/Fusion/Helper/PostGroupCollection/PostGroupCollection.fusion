@@ -1,0 +1,4 @@
+prototype(CodeQ.Blog.Utils:Helper.PostGroupCollection) < prototype(Neos.Fusion:Value) {
+    node = ${documentNode}
+    value = ${q(this.node).find('[instanceof CodeQ.Blog.Utils:Mixin.PostGroup]')}
+}

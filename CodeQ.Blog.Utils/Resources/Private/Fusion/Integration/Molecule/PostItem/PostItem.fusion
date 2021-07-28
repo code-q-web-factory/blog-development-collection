@@ -1,0 +1,21 @@
+prototype(CodeQ.Blog.Utils:Integration.Molecule.PostItem) < prototype(Neos.Fusion:Component) {
+    node = null
+    @context.node = ${node}
+
+    rendererType = 'CodeQ.Blog.Utils:Presentation.Molecule.PostItem'
+
+    # Props
+    title = ${q(node).property('title')}
+    date = ${q(node).property('createdAt')}
+    thumbnailUri = CodeQ.Blog.Utils:Helper.PostThumbnailUri {
+        node = ${node}
+    }
+    link = Neos.Neos:NodeUri {
+        node = ${node}
+    }
+
+    renderer = Neos.Fusion:Renderer {
+        type = ${props.rendererType}
+        element.@apply.props = ${props}
+    }
+}

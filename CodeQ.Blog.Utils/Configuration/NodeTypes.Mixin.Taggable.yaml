@@ -1,0 +1,13 @@
+'CodeQ.Blog.Utils:Mixin.Taggable':
+  abstract: true
+  properties:
+    tags:
+      type: references
+      ui:
+        label: 'Tags'
+        reloadIfChanged: true
+        inspector:
+          group: 'document'
+          position: 'after createdAt'
+          editorOptions:
+            nodeTypes: [ CodeQ.Blog.Utils:Mixin.Tag ]

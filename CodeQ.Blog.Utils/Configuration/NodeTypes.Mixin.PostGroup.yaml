@@ -1,0 +1,19 @@
+'CodeQ.Blog.Utils:Mixin.PostGroup':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Document': true
+    'CodeQ.Blog.Utils:Constraint.Document.Restricted': true
+#    'CodeQ.Blog.Utils:Mixin.HideSeo': true
+    'Neos.Seo:NoindexMixin': true
+  ui:
+    label: 'Blog Gruppe'
+    icon: icon-newspaper
+    group: 'general'
+    position: 100
+  constraints:
+    nodeTypes:
+      'Neos.Neos:Document': ~
+      'CodeQ.Blog.Utils:Mixin.Post': true
+  properties:
+    _hiddenInIndex:
+      defaultValue: true

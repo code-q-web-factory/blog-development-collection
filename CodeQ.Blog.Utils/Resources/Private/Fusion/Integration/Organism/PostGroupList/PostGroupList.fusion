@@ -1,0 +1,12 @@
+prototype(CodeQ.Blog.Utils:Integration.Organism.PostGroupList) < prototype(Neos.Fusion:Component) {
+    rendererType = 'CodeQ.Blog.Utils:Presentation.Molecule.TaxonomyList'
+
+    # Props
+    title = 'Categories'
+    items = CodeQ.Blog.Utils:Helper.PostGroupCollection
+
+    renderer = Neos.Fusion:Renderer {
+        type = ${props.rendererType}
+        element.@apply.props = ${props}
+    }
+}

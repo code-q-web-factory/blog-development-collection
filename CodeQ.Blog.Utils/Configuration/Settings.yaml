@@ -1,0 +1,10 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        CodeQ.Blog.Utils: true
+
+CodeQ:
+  Blog:
+    Utils:
+      includeDefaultAssets: false

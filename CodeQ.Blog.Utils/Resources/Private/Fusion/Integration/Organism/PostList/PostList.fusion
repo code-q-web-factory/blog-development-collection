@@ -1,0 +1,14 @@
+prototype(CodeQ.Blog.Utils:Integration.Organism.BlogPostList) < prototype(Flowpack.Listable:PaginatedCollection) {
+    node = ${documentNode}
+    @context.node = ${this.node}
+
+    collection = CodeQ.Blog.Utils:Helper.PostCollection {
+        node = ${node}
+    }
+
+    # Disabled Flowpack.Listable default wrapping
+    prototype(Flowpack.Listable:Collection) {
+        @process.tmpl = ${'<div class="codeq-blog__post-list">' + value + '</div>'}
+        itemRenderer.@process.tmpl >
+    }
+}

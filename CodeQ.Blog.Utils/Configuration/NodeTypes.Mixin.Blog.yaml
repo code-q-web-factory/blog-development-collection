@@ -1,0 +1,15 @@
+'CodeQ.Blog.Utils:Mixin.Blog':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: 'Blog Übersichtsseite'
+    icon: icon-newspaper
+    group: 'plugins'
+    position: 100
+  constraints:
+    nodeTypes:
+      'Neos.Neos:Document': false
+      'CodeQ.Blog.Utils:Mixin.Post': true
+      'CodeQ.Blog.Utils:Mixin.PostGroup': true
+      'CodeQ.Blog.Utils:Mixin.Tag': true

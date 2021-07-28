@@ -1,0 +1,16 @@
+###
+## Add your overrides to 3rd party fusion code here
+###
+
+prototype(Neos.Neos:Page).head.stylesheets.codeqBlog = Neos.Fusion:Component {
+    @if.includeDemoAssets = ${Configuration.setting('CodeQ.Blog.Utils.includeDefaultAssets')}
+
+    resourceUri = Neos.Fusion:ResourceUri {
+        path = 'resource://CodeQ.Blog.Utils/Public/Frontend/style.css'
+    }
+
+    renderer = afx`
+        <Neos.Fusion:Debug>{props.resourceUri}</Neos.Fusion:Debug>
+        <link rel="stylesheet" type="text/css" href={props.resourceUri} />
+    `
+}

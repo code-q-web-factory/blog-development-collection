@@ -1,0 +1,26 @@
+CodeQ.Blog.Utils:Mixin.Tag:
+  abstract: true
+  superTypes:
+    'Neos.Neos:Document': true
+    'CodeQ.Blog.Utils:Constraint.Document.Restricted': true
+    'CodeQ.Blog.Utils:Constraint.Document.NoSubDocuments': true
+  ui:
+    label: Tag
+    icon: icon-tag
+    group: 'general'
+    position: 900
+    inspector:
+      groups:
+        image:
+          label: 'Bild-Konfiguration'
+          position: 5
+          icon: 'icon-image'
+  properties:
+    image:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Teaser-Bild'
+        reloadIfChanged: true
+        inspector:
+          group: 'image'
+          position: 50

@@ -1,0 +1,14 @@
+'CodeQ.Blog:Document.TagPage':
+  superTypes:
+    CodeQ.Blog.Utils:Mixin.Tag: true
+  ui:
+    label: Kategorie
+    icon: icon-tag
+    group: 'general'
+    position: 900
+    inspector:
+      groups:
+        image:
+          label: 'Bild-Konfiguration'
+          position: 5
+          icon: 'icon-image'

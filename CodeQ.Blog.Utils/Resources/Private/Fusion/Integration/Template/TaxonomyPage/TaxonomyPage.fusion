@@ -1,0 +1,9 @@
+prototype(CodeQ.Blog.Utils:Integration.Template.TaxonomyPage) < prototype(Neos.Fusion:Component) {
+    renderer = afx`
+        <main class="main codeq-blog__overview">
+            <div>
+                <CodeQ.Blog.Utils:Integration.Organism.BlogPostList />
+            </div>
+        </main>
+    `
+}

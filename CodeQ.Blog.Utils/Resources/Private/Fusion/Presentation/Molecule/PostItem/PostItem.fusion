@@ -1,0 +1,20 @@
+prototype(CodeQ.Blog.Utils:Presentation.Molecule.PostItem) < prototype(Neos.Fusion:Component) {
+
+    link = null
+    title = null
+    thumbnail = null
+    date = null
+    date.@process.format = ${Date.format(value, 'd.m.Y')}
+
+    renderer = afx`
+        <div class="codeq-blog__post-item">
+            <a href={props.link}>
+                <div class="codeq-blog__post-item-thumbnail">
+                    <img src={props.thumbnailUri} alt={props.title} />
+                </div>
+                <h3>{props.title}</h3>
+                <span class="codeq-blog__post-item-date">{props.date}</span>
+            </a>
+        </div>
+    `
+}

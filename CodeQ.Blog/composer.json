@@ -1,0 +1,19 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "codeq/blog",
+    "require": {
+        "codeq/blog-utils": "*",
+        "flowpack/listable": "~3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "CodeQ\\Blog\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "CodeQ.Blog"
+        }
+    }
+}

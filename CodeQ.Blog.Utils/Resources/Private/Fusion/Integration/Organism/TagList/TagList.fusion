@@ -1,0 +1,12 @@
+prototype(CodeQ.Blog.Utils:Integration.Organism.TagList) < prototype(Neos.Fusion:Component) {
+    rendererType = 'CodeQ.Blog.Utils:Presentation.Molecule.TaxonomyList'
+
+    # Props
+    title = 'Tags'
+    items = CodeQ.Blog.Utils:Helper.TagCollection
+
+    renderer = Neos.Fusion:Renderer {
+        type = ${props.rendererType}
+        element.@apply.props = ${props}
+    }
+}

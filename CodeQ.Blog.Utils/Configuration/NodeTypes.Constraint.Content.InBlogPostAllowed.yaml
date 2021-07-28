@@ -1,0 +1,5 @@
+##
+# These content NodeTypes can be used on the blog
+##
+'CodeQ.Blog.Utils:Constraint.Content.InBlogPostAllowed':
+  abstract: true

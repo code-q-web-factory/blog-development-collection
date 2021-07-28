@@ -1,0 +1,43 @@
+prototype(CodeQ.Blog.Utils:Helper.PostCollection) < prototype(Neos.Fusion:Component) {
+    node = ${documentNode}
+    sort = 'DESC'
+
+    renderer = Neos.Fusion:Case {
+        fallbackNoNode {
+            condition = ${props.node == null}
+            # todo throw exception?
+            renderer = ${[]}
+        }
+
+        blogOverview {
+            condition = ${Neos.Node.isOfType(props.node, 'CodeQ.Blog.Utils:Mixin.Blog')}
+            renderer = Neos.Fusion:Value {
+                value = ${q(props.node).find('[instanceof CodeQ.Blog.Utils:Mixin.Post]')}
+                value.@process.sort = ${value.sort('createdAt', props.sort)}
+            }
+        }
+
+        blogPostGroup {
+            condition = ${Neos.Node.isOfType(props.node, 'CodeQ.Blog.Utils:Mixin.PostGroup')}
+            renderer = Neos.Fusion:Value {
+                value = ${q(props.node).find('[instanceof CodeQ.Blog.Utils:Mixin.Post]')}
+                value.@process.sort = ${value.sort('createdAt', props.sort)}
+            }
+        }
+
+        blogTag {
+            condition = ${Neos.Node.isOfType(props.node, 'CodeQ.Blog.Utils:Mixin.Tag')}
+            renderer = Neos.Fusion:Value {
+                value = ${q(props.node).closest('[instanceof CodeQ.Blog.Utils:Mixin.Blog]').find('[instanceof CodeQ.Blog.Utils:Mixin.Post]')}
+                value.@process.sort = ${value.sort('createdAt', props.sort)}
+                value.@process.filterByTag = ${value.filterByTag(q(props.node).property('uriPathSegment'))}
+            }
+        }
+
+        # todo necessary?
+        default {
+            condition = ${true}
+            renderer = ${[]}
+        }
+    }
+}

@@ -1,0 +1,15 @@
+'CodeQ.Blog:Document.PostPage':
+  superTypes:
+    'CodeQ.Blog.Utils:Mixin.Post': true
+    'CodeQ.Blog.Utils:Mixin.Taggable': true
+  ui:
+    label: 'Blog Post'
+    icon: 'icon-book'
+    group: 'general'
+    position: 100
+    inspector:
+      groups:
+        image:
+          label: 'Bild-Konfiguration'
+          position: 5
+          icon: 'icon-image'

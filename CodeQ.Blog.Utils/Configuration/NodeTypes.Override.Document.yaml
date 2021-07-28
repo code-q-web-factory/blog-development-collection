@@ -1,0 +1,6 @@
+'Neos.Neos:Document':
+  constraints:
+    nodeTypes:
+      'CodeQ.Blog.Utils:Mixin.Tag': false
+      'CodeQ.Blog.Utils:Mixin.PostGroup': false
+      'CodeQ.Blog.Utils:Mixin.Post': false

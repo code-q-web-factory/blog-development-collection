@@ -1,0 +1,20 @@
+prototype(CodeQ.Blog:Document.PostPage) < prototype(CodeQ.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+        main = Neos.Neos:ContentCollection {
+            nodePath = 'main'
+        }
+
+        title = ${q(node).property('title')}
+        thumbnailUri = CodeQ.Blog.Utils:Helper.PostThumbnailUri {
+            node = ${documentNode}
+        }
+
+        renderer = afx`
+            <main class="main">
+                <h1>{props.title}</h1>
+                <img src={props.thumbnailUri} alt={props.title} />
+                {props.main}
+            </main>
+        `
+    }
+}
